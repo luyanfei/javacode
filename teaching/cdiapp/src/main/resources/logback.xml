@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user -->
+<!-- -->
+<!-- For professional support please see -->
+<!-- http://www.qos.ch/shop/products/professionalSupport -->
+<!-- -->
+<configuration>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.out</Target>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<logger name="org.hibernate" level="info" />
+<!-- 	<logger name="org.hibernate.cache" level="debug" /> -->
+<!-- 	<logger name="org.hibernate.type" level="info" /> -->
+<!-- 	<logger name="org.hibernate.transaction" level="info" /> -->
+<!-- 	<logger name="org.hibernate.tool.hbm2ddl" level="info" /> -->
+	
+	<logger name="org.jboss.weld" level="info"/>
+	<logger name="org.jboss.weld.Bootstrap" level="info" />
+	<logger name="cn.jhc.persistence" level="info" />
+	<logger name="cn.jhc.controller" level="info"/>
+	<root level="warn">
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>
