@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with type="cn.jhc.client.DemoPanel.Resources" field="resources"></ui:with>
+	<ui:style>
+		.navPanel {
+			background: #EEEEEE;
+		}
+		.divider {
+			height: 10px;
+			background: #999999;
+		}
+		.button {
+			width: 100%;
+		}
+		.mainPanel {
+			border-left: 1px solid #333333;
+			padding: 10px;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="PX">
+		<g:west size="180">
+			<g:ScrollPanel>
+				<g:FlowPanel addStyleNames="{style.navPanel}">
+					<g:HTMLPanel>
+						<g:Image resource="{resources.logo}" />
+					</g:HTMLPanel>
+					<g:HTML wordWrap="true" styleName="{style.divider}" />
+					<g:Button ui:field="showLoginPanel" styleName="{style.button}" text="Show S-Mart Login"/>
+					<g:Button styleName="{style.button}" text="Hide S-Mart Login" ui:field="hideLoginPanel"/>
+					<g:Button styleName="{style.button}" text="StackPanel Demo" ui:field="showStackPanelDemoButton"/>
+					<g:Button styleName="{style.button}" text="DisclosurePanel" ui:field="disclosurePanelButton"/>
+					<g:Button styleName="{style.button}" text="SplitLayoutPanel" ui:field="splitLayoutButton"/>
+				</g:FlowPanel>
+			</g:ScrollPanel>
+		</g:west>
+		<g:center>
+			<g:SimplePanel styleName="{style.mainPanel}" ui:field="mainArea"/>
+		</g:center>
+
+	</g:DockLayoutPanel>
+</ui:UiBinder> 
