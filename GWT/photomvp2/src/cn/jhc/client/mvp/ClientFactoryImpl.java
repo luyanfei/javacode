@@ -31,7 +31,8 @@ public class ClientFactoryImpl implements ClientFactory {
 	}
 
 	public PhotoAlbumServiceAsync getPhotoServices() {
-		if (rpcService == null) rpcService = GWT.create(PhotoAlbumService.class);
+		if (rpcService == null) 
+			rpcService = GWT.create(PhotoAlbumService.class);
 		return rpcService;
 	}
 
